@@ -1,0 +1,27 @@
+# Secrets and local environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Git / editor
+.git
+.github
+.vscode
+.idea
+
+# Python caches / virtualenvs
+**/__pycache__
+**/*.pyc
+.venv
+venv
+
+# Node dependencies and build output
+frontend/node_modules
+frontend/dist
+
+# Local runtime database / caches
+backend/database/*.db
+backend/database/*.db-*
+
+# Logs
+*.log

@@ -1,0 +1,43 @@
+# AirVision AI — Render Blueprint
+# Single Docker web service: React SPA + Flask API + ML model.
+# Secrets are intentionally declared with sync:false and must be entered
+# in Render's Environment dashboard.
+services:
+  - type: web
+    name: airvision-ai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health-check
+    envVars:
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: DATA_GOV_API_KEY
+        sync: false
+      - key: CPCB_RESOURCE_ID
+        value: "3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69"
+      - key: ENABLE_CPCB
+        value: "1"
+      - key: CPCB_TTL_SECONDS
+        value: "900"
+      - key: CPCB_CO_UNIT
+        value: "auto"
+      - key: CACHE_TTL_SECONDS
+        value: "300"
+      - key: ENABLE_AUTO_REFRESH
+        value: "0"
+      - key: ENABLE_DEMO_DATA
+        value: "0"
+      - key: FETCH_CONCURRENCY
+        value: "10"
+      - key: MAX_CALLS_PER_REFRESH
+        value: "160"
+      - key: REQUEST_TIMEOUT
+        value: "12"
+      - key: FORCE_REFRESH_MIN_INTERVAL
+        value: "120"
+      - key: RETRY_ATTEMPTS
+        value: "2"
+      - key: CORS_ORIGINS
+        value: "*"
