@@ -121,23 +121,8 @@ npm run dev
 # → http://localhost:5173  (Vite proxies /api → http://localhost:5000)
 ```
 
-Open <http://localhost:5173> and explore. The dashboard auto-refreshes every 5 minutes.
-
 ---
 
-## 📸 Screenshots
-
-| Dashboard | Global Map |
-|-----------|------------|
-| KPI cards, AQI gauge, weather, pollutants, health advisory & live ranking | 58 colour-coded city markers with rich popups, filters & legend |
-
-| Historical Analytics | Weather Forecast |
-|----------------------|------------------|
-| Monthly/yearly trends, distribution, correlation heatmap, feature importance | AQI forecast (Now/1h/6h/12h/24h), hourly & daily charts |
-
-> Capture fresh screenshots by running the app (`npm run dev`) — the data is
-> live, so screenshots are always current. The UI ships with dark and light
-> themes; both look presentation-ready.
 
 ## 🔑 API Configuration & Environment Variables
 
